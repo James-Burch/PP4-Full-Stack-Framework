@@ -18,11 +18,14 @@ from django.contrib import admin
 from django.urls import path, include
 from booking.views import my_booking
 from . import views
+from django.contrib.auth.decorators import login_required
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('booking/', my_booking, name='booking'),
     path('accounts/', include('booking.urls', 'booking')),
+    path('bookings/new/', views.create_booking, name='create_booking'),
     path('', views.home, name='home'),
 ]
 

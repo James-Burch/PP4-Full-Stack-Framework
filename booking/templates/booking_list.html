@@ -1,0 +1,8 @@
+<h1>Your Tee Time Bookings</h1>
+<ul>
+    {% for booking in bookings %}
+        <li>{{ booking.tee_time }} - Booked on {{ booking.created_at }}</li>
+    {% empty %}
+        <li>No bookings yet!</li>
+    {% endfor %}
+</ul>
