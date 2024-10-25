@@ -19,7 +19,7 @@ from django.urls import path, include
 from booking.views import my_booking
 from . import views
 from django.contrib.auth.decorators import login_required
-
+from my_app import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),

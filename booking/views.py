@@ -22,7 +22,7 @@ def register(request):
     else:
         form = UserCreationForm()
 
-    return render(request, 'booking/templates/register.html', {'form': form})
+    return render(request, 'templates/register.html', {'form': form})
 
 
 def login_view(request):
@@ -38,7 +38,7 @@ def login_view(request):
     else:
         form = AuthenticationForm()
 
-    return render(request, 'booking/templates/login.html', {'form': form})  
+    return render(request, 'templates/login.html', {'form': form})  
 
 
 def logout_view(request):
